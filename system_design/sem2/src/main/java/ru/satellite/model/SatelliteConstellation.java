@@ -1,3 +1,5 @@
+package ru.satellite.model;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -5,7 +7,7 @@ public class SatelliteConstellation {
     private final String constellationName;
     private final List<Satellite> satellites = new ArrayList<>();
 
-    SatelliteConstellation(String constellationName) {
+    public SatelliteConstellation(String constellationName) {
         this.constellationName = constellationName;
     }
 

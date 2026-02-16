@@ -1,3 +1,5 @@
+package ru.satellite.system;
+
 public class SatelliteState {
     private boolean isActive = false;
     private String statusMessage;
