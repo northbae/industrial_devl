@@ -1,3 +1,9 @@
+package ru.satellite;
+
+import ru.satellite.model.CommunicationSatellite;
+import ru.satellite.model.ImagingSatellite;
+import ru.satellite.model.Satellite;
+import ru.satellite.model.SatelliteConstellation;
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,9 +1,14 @@
+package ru.sem3.model;
+
+import ru.sem3.system.EnergySystem;
+import ru.sem3.system.SatelliteState;
+
 public abstract class Satellite {
     protected String name;
     protected SatelliteState state;
     protected EnergySystem energy;
 
-    Satellite(String name, double batteryLevel) {
+    public Satellite(String name, double batteryLevel) {
         this.name = name;
         this.energy = new EnergySystem(batteryLevel);
         this.state = new SatelliteState();

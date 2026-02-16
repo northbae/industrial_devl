@@ -1,3 +1,5 @@
+package ru.satellite.system;
+
 public class EnergySystem {
     private double batteryLevel;
     private static final double LOW_BATTERY_THRESHOLD = 0.2;
@@ -9,7 +11,7 @@ public class EnergySystem {
     }
 
     public boolean consumeButtery(double batteryValue) {
-        if (batteryValue <= 0 || batteryLevel <= MAX_BATTERY) {
+        if (batteryValue <= 0 || batteryLevel <= MIN_BATTERY) {
             return false;
         }
         batteryLevel = Math.max(MIN_BATTERY, batteryLevel - batteryValue);
@@ -28,4 +30,5 @@ public class EnergySystem {
     public double getBatteryLevel() {
         return batteryLevel;
     }
+
 }

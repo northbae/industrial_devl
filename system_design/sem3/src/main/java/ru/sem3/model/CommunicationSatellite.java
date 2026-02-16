@@ -1,7 +1,9 @@
+package ru.sem3.model;
+
 public class CommunicationSatellite extends Satellite{
     private final double bandwidth;
 
-    CommunicationSatellite(String name, double batteryLevel, double bandwidth) {
+    public CommunicationSatellite(String name, double batteryLevel, double bandwidth) {
         super(name, batteryLevel);
         this.bandwidth = bandwidth;
     }
@@ -15,7 +17,7 @@ public class CommunicationSatellite extends Satellite{
         if (state.isActive()) {
             System.out.printf("%s: Передача данных со скоростью %.2f Мбит/с%n", name, bandwidth);
             sendData(bandwidth);
-            energy.consumeButtery(0.05);
+            energy.consumeBattery(0.05);
         }
         else {
             System.out.printf("%s: Не может отправить данные - не активен%n", name);

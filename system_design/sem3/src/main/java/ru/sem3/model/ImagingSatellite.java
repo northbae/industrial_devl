@@ -1,8 +1,10 @@
+package ru.sem3.model;
+
 public class ImagingSatellite extends Satellite{
     private final double resolution;
     private int photosTaken;
 
-    ImagingSatellite(String name, double batteryLevel, double resolution) {
+    public ImagingSatellite(String name, double batteryLevel, double resolution) {
         super(name, batteryLevel);
         this.resolution = resolution;
         this.photosTaken = 0;
@@ -21,7 +23,7 @@ public class ImagingSatellite extends Satellite{
         if (state.isActive()) {
             System.out.printf("%s: Съемка территории с разрешением %.2f м/пиксель%n", name, resolution);
             takePhoto();
-            energy.consumeButtery(0.08);
+            energy.consumeBattery(0.08);
         }
         else {
             System.out.printf("%s: Не может выполнить съемку - неактивен%n", name);
